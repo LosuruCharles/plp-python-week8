@@ -1,0 +1,97 @@
+PERSONAL MINI-TOOLKIT - PLAN (Part A)
+
+1. MY TOOLS (four)
+
+  Tool 1: To-Do List
+  Tool 2: Calculator
+  Tool 3: Number Guessing Game
+  Tool 4: Expense Tracker
+
+
+2. WHAT EACH TOOL DOES (one sentence each)
+
+  Tool 1 - To-Do List:
+    Lets the user add, view and remove tasks that are kept while the program runs.
+
+  Tool 2 - Calculator:
+    Takes two numbers and an operator (+, -, *, /) and shows the result.
+
+  Tool 3 - Number Guessing Game:
+    Picks a secret number from 1 to 100 and gives the user 7 tries to guess it,
+    with "too high" or "too low" hints.
+
+  Tool 4 - Expense Tracker:
+    Records what the user spends and shows every expense with the total.
+
+
+3. EXACT MENU TEXT
+
+Main menu (shown every time the user returns to it):
+
+
+   PERSONAL MINI-TOOLKIT
+
+  1. To-Do List
+  2. Calculator
+  3. Number Guessing Game
+  4. Expense Tracker
+  5. Quit
+
+Enter your choice (1-5):
+
+Sub-menu for To-Do List and Expense Tracker:
+
+  1. Add ...
+  2. View ...
+  3. Remove ...
+  4. Back to main menu
+Choose an option (1-4):
+
+(The Calculator and the Guessing Game have no sub-menu. The Calculator
+repeats until the user types "back".)
+
+
+4. CONCEPTS EACH TOOL USES
+
+  Main menu:
+    - while loop (runs until the user chooses Quit)
+    - if / elif / else (sends the choice to the right tool)
+    - a True/False variable (running) to stop the loop
+
+  Tool 1 - To-Do List:
+    - Loop:        while loop for the sub-menu, for loop to print tasks
+    - Conditional: if / elif / else for the sub-menu, check for empty
+                   list or empty task
+    - List:        todo_list with append() and pop()
+    - f-string:    printing the numbered task list and messages
+
+  Tool 2 - Calculator:
+    - Loop:        while loop that repeats until the user types "back"
+    - Conditional: if / elif / else to pick the operator, check for
+                   divide by zero and invalid numbers
+    - List:        none (uses variables only)
+    - f-string:    showing the result, e.g. "5 + 3 = 8"
+
+  Tool 3 - Number Guessing Game:
+    - Loop:        while loop until the user wins or runs out of attempts
+    - Conditional: if / elif / else for too high, too low, correct, and
+                   invalid guesses
+    - List:        guesses, which stores every guess and is shown at the end
+    - f-string:    attempts left, final result and the list of guesses
+
+  Tool 4 - Expense Tracker:
+    - Loop:        while loop for the sub-menu, for loop to print expenses
+    - Conditional: if / elif / else for the sub-menu, check for empty
+                   description or bad amount
+    - List:        expense_names and expense_amounts (kept in the same
+                   order), using append(), pop() and sum()
+    - f-string:    printing each expense line and the total
+
+
+5. EXTRA CHECKS I WILL ADD (friendly error handling)
+
+  - Invalid menu choice -> message, then the menu is shown again
+  - Empty task / expense name -> not added
+  - Removing a number that does not exist -> friendly message
+  - Calculator: letters instead of numbers, unknown operator, divide by zero
+  - Guessing game: guess is not a number or is outside 1-100
